@@ -1,0 +1,21 @@
+.box {
+  border: 1px solid red;
+  color: maroon;
+  font: 16px;
+  font-weight: 900;
+  background-color: red;
+}
+
+@media screen and (max-width: 900px) {
+  .box {
+    color: yellow;
+  }
+}
+
+.box__link {
+  color: blue;
+}
+
+.box__link::before {
+  content: "";
+}

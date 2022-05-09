@@ -1,10 +1,8 @@
 section.drugDrop {
-  min-height: 710px;
+  min-height: 100vh;
   margin: 10px 0;
-}
-
-section.drugDrop h1 {
-  font-size: 4vw;
+  color: h1;
+  color-font-size: 4vw;
 }
 
 section.drugDrop .wrapper {
@@ -17,10 +15,9 @@ section.drugDrop .wrapper .imageBox {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 300px;
-  height: 300px;
   margin: 3px;
   padding: 5px;
+  height: 15vw;
   flex-basis: calc(100% / 5);
   border: 1px solid #bbb;
 }
@@ -41,7 +38,7 @@ section.drugDrop .wrapper .box {
   display: flex;
   flex-direction: column;
   width: 300px;
-  height: 300px;
+  height: 18vw;
   margin: 3px;
   border: 1px solid #bbb;
 }

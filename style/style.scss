@@ -1,3 +1,4 @@
+@import "blocks/_variables.scss";
 @import "blocks/section__breakSection.scss";
 @import "blocks/section__drugNDrop.scss";
 
@@ -11,6 +12,10 @@
 
 html {
     font-size: 16px;
+}
+
+body {
+    background-color: $bg-color;
 }
 
 main {

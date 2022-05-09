@@ -21,8 +21,9 @@ section.breakSection::before {
 }
 
 section.drugDrop {
-  min-height: 710px;
+  min-height: 100vh;
   margin: 10px 0;
+  color: white;
 }
 
 section.drugDrop h1 {
@@ -39,17 +40,16 @@ section.drugDrop .wrapper .imageBox {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 300px;
-  height: 300px;
   margin: 3px;
   padding: 5px;
+  height: 15vw;
   flex-basis: calc(100% / 5);
   border: 1px solid #bbb;
 }
 
 section.drugDrop .wrapper .imageBox:hover {
   border: 1px solid #555;
-  box-shadow: 2px 2px 10px #000;
+  box-shadow: 2px 2px 10px #ccc;
 }
 
 section.drugDrop .wrapper .imageBox img {
@@ -63,23 +63,23 @@ section.drugDrop .wrapper .box {
   display: flex;
   flex-direction: column;
   width: 300px;
-  height: 300px;
+  height: 18vw;
   margin: 3px;
   border: 1px solid #bbb;
 }
 
 section.drugDrop .wrapper .box:hover {
   border: 1px solid #555;
-  box-shadow: 2px 2px 10px #000;
+  box-shadow: 2px 2px 10px #ccc;
 }
 
 section.drugDrop .wrapper .box.over {
-  border: 1px solid #888;
-  box-shadow: 2px 2px 10px #888;
+  border: 1px solid pink;
+  box-shadow: 2px 2px 10px pink;
 }
 
 section.drugDrop .wrapper.drugDrop__catBreeds {
-  font-size: 2vw;
+  font-size: 1.8vw;
   text-align: center;
 }
 
@@ -97,6 +97,10 @@ section.drugDrop .drugDrop__startBtn {
 
 html {
   font-size: 16px;
+}
+
+body {
+  background-color: black;
 }
 
 main {
