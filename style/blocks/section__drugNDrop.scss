@@ -2,8 +2,9 @@
 @import "mixins";
 
 section.drugDrop {
-    min-height: 710px;
+    min-height: 100vh;
     margin: 10px 0;
+    color: $text-color;
 
     h1 {
         font-size: 4vw;
@@ -18,16 +19,15 @@ section.drugDrop {
             display: inline-flex;
             justify-content: center;
             align-items: center;
-            width: 300px;
-            height: 300px;
             margin: 3px;
             padding: 5px;
+            height: 15vw;
             flex-basis: calc(100% / 5);
             border: 1px solid #bbb;
 
             &:hover {
                 border: 1px solid #555;
-                box-shadow: 2px 2px 10px #000;
+                box-shadow: 2px 2px 10px $shadow-color;
             }
         
             img {
@@ -42,22 +42,23 @@ section.drugDrop {
             display: flex;
             flex-direction: column;
             width: 300px;
-            height: 300px;
+            height: 18vw;
             margin: 3px;
             border: 1px solid #bbb;
 
             &:hover {
                 border: 1px solid #555;
-                box-shadow: 2px 2px 10px #000;
+                box-shadow: 2px 2px 10px $shadow-color;
             }
         
             &.over {
-                border: 1px solid #888;
-                box-shadow: 2px 2px 10px #888;
+                border: 1px solid $shadow-active-color;
+                box-shadow: 2px 2px 10px $shadow-active-color;
             }
         }
+        
         &.drugDrop__catBreeds {
-            font-size: 2vw;
+            font-size: 1.8vw;
             text-align: center;
         }
 
