@@ -1,0 +1,25 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bart-git21/Portfolio.git"
+  },
+  "keywords": [
+    "Javascript"
+  ],
+  "author": "user",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bart-git21/Portfolio/issues"
+  },
+  "homepage": "https://github.com/bart-git21/Portfolio#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
+}
