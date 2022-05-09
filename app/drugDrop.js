@@ -34,7 +34,6 @@ function drugDrop__start() {
     document.querySelector(".drugDrop__pictures").innerHTML = null;
     for (let i = 0; i<5; i++) {
         document.querySelector(".drugDrop__pictures").innerHTML += 
-        // <div class="imageBox"><img id="pic-${CATS[i][2]}" src="images/${CATS[i][0]}" alt="${CATS[i][1]}" draggable="true"></div>
         `
             <div class="imageBox"><img id="pic-${CATS[i][2]}" src="${CATS[i][0]}" alt="${CATS[i][1]}" draggable="true"></div>
         `;

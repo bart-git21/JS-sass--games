@@ -2,9 +2,9 @@
 
 Lets check which tools and technologies used in this project:
 
-## CSS ones:
+### CSS ones:
 - SASS(SCSS)
 
-## Javascript ones:
+### Javascript ones:
 - DOM manipulation
 - HTML5 Drag and Drop API. 
