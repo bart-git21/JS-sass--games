@@ -1,6 +1,8 @@
 @import "blocks/_variables.scss";
+@import "blocks/h.scss";
 @import "blocks/section__breakSection.scss";
-@import "blocks/section__drugNDrop.scss";
+@import "blocks/section__game__drugNDrop.scss";
+@import "blocks/section__game__guessword.scss";
 
 *,
 *:before,

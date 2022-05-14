@@ -1,7 +1,7 @@
-const url = "./pages/drugDrop.html"
-fetch(url)
+const url__gameDrugDrop = "./pages/game__drugDrop.html"
+fetch(url__gameDrugDrop)
 .then(response=> response.text())
-.then(data=> document.querySelector("drugDrop").innerHTML = data)
+.then(data=> document.querySelector("gameDrugDrop").innerHTML = data)
 .then(function(){drugDrop()});
 
 function drugDrop() {
