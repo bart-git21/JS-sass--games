@@ -298,6 +298,49 @@ section.games__guessWord .neons:hover {
   color: #fff;
 }
 
+section.games__moveDot {
+  position: relative;
+  color: white;
+}
+
+section.games__moveDot .dot__scene {
+  width: 50vw;
+  height: 70vh;
+  border: 1px solid white;
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10vw;
+}
+
+section.games__moveDot .dot__scene .dot {
+  width: 20px;
+  height: 20px;
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 50%;
+  position: absolute;
+  opacity: 1;
+}
+
+section.games__moveDot .dot__scene .pulseDot {
+  animation: pulse 1.5s infinite linear;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 *,
 *:before,
 *:after {
