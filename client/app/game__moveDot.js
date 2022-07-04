@@ -6,6 +6,7 @@ fetch(url__MoveDot)
 .then(function(){gameMoveDot()});
 
 function gameMoveDot() {
+    let dot__scene = document.querySelector(".dot__scene");
     
     function createCircle() {
         let circle = document.createElement("div");
@@ -36,23 +37,27 @@ function gameMoveDot() {
                 val.myCircle.style.left = `${val.xCoord - val.myCircle.offsetWidth/2}px`;
             })
             
-            document.querySelector(".dot__scene").appendChild(this.myCircle);
+            dot__scene.appendChild(this.myCircle);
         }
 
         moveRight(speed=200) {
-            this.xCoord += speed;
+            this.xCoord += this.speed;
+            if (this.xCoord >= dot__scene.clientWidth) this.xCoord = dot__scene.clientWidth - 20;
             this.myCircle.style.left = `${this.xCoord}px`;
         }
         moveLeft() {
             this.xCoord -= this.speed;
+            if (this.xCoord < 0) this.xCoord = 0;
             this.myCircle.style.left = `${this.xCoord}px`;
         }
-        moveUp(speed=200) {
-            this.yCoord -= speed;
+        moveUp() {
+            this.yCoord -= this.speed;
+            if (this.yCoord < 0) this.yCoord = 0;
             this.myCircle.style.top = `${this.yCoord}px`;
         }
         moveDown() {
             this.yCoord += this.speed;
+            if (this.yCoord >= dot__scene.clientHeight) this.yCoord = dot__scene.clientHeight - 20;
             this.myCircle.style.top = `${this.yCoord}px`;
         }
     }
@@ -70,22 +75,35 @@ function gameMoveDot() {
     // ====================== choose the dot to move ==================================
     let activeDot;
     function whoIsActiveDot(e) {
-        let dots = document.querySelectorAll(".dot");
-        // если выбрать ту же точку - она перестанет моргать и перестанет двигаться
-        if([...e.target.classList].find(e=>e=="pulseDot")) {
-            e.target.classList.remove("pulseDot");
+        if ([...this.classList].includes("pulseDot")) {
             activeDot = null;
+            this.classList.remove("pulseDot");
         }
-        // если выбрать другую точку - предыдущая вернет первоначальный вид, а данная начнет моргать и двигаться
         else {
+            activeDot = circles[this.title-1];
+            let dots = document.querySelectorAll(".dot");
             for (let i = 0; i<circles.length; i++) {
-                dots[i].style.backgroundColor = circles[i].color;
                 dots[i].classList.remove("pulseDot");
             }
-            e.target.classList.toggle("pulseDot");
-            e.target.style.backgroundColor = null;
-            activeDot = circles.find(elem=> elem.title === +e.target.title);
-        };
+            this.classList.add("pulseDot");
+        }
+
+        // let dots = document.querySelectorAll(".dot");
+        // // если выбрать ту же точку - она перестанет моргать и перестанет двигаться
+        // if([...e.target.classList].find(e=>e=="pulseDot")) {
+        //     e.target.classList.remove("pulseDot");
+        //     activeDot = null;
+        // }
+        // // если выбрать другую точку - предыдущая вернет первоначальный вид, а данная начнет моргать и двигаться
+        // else {
+        //     for (let i = 0; i<circles.length; i++) {
+        //         dots[i].style.backgroundColor = circles[i].color;
+        //         dots[i].classList.remove("pulseDot");
+        //     }
+        //     e.target.classList.toggle("pulseDot");
+        //     e.target.style.backgroundColor = null;
+        //     activeDot = circles.find(elem=> elem.title === +e.target.title);
+        // };
     }
 
     // =========================== move ==========================================

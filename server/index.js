@@ -30,7 +30,7 @@ app.get("/sendtext", (req, res) => {
     .end();
 })
 app.get("/wall", (req, res) => {
-    // const file = `${__dirname}/../client/pages/game__drugDrop.html`;
+    // const file = `${__dirname}/../client/pages/game__dragDrop.html`;
     const file = path.join(`${__dirname}/../client/images/background.png`);
     res.sendFile(file);
 })
