@@ -1,6 +1,6 @@
-﻿# Hi, I'm Frontend Developer and this is my Portfolio-project
+﻿# Games
 
-Lets check which tools and technologies used in this project:
+## Tools and technologies used:
 
 ### CSS ones:
 - SASS(SCSS)
